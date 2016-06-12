@@ -1,0 +1,46 @@
+<navigation></navigation>
+
+<div class="container">
+  <div class="row">
+    
+     <div class="col-md-6">
+
+      <h1 class="form-signin-heading">Profile</h1>
+
+      <form  class="form-horizontal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <!--<div class="form-group">
+          <label class="col-sm-3 control-label">Full name</label>
+          <p class="form-control-static">{{ vm.user.name }}</p>
+        </div>-->
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Email</label>
+          <p class="form-control-static">{{ vm.user.email }}</p>
+        </div>
+
+
+
+<div ng-switch on="vm.user.email">
+    <div ng-switch-when="test@test.com">
+         <div class="form-group">
+          <label class="col-sm-3 control-label">WarNet.IO</label>
+          <p class="form-control-static">Purchased</p>
+        </div>
+    </div>
+    <div ng-switch-default>
+         <label class="col-sm-3 control-label">WarNet.IO</label>
+         <div class="form-group">
+         
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="T9QV4PQFHGVQN">
+        <input type="image" style="    margin-top: 4px !important;" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" >
+         </div>
+    </div>
+</div>
+       
+
+        </form>
+      
+    </div>
+  </div>
+</div>
